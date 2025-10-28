@@ -28,8 +28,8 @@ const App = () => {
         {/* Protected Routes */}
         {user && (
           <>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="*" element={<Navigate to="/dashboard" />} />
           </>
         )}
       </Routes>
