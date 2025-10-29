@@ -44,7 +44,13 @@ export const signin = async (req, res) => {
         expiresIn: "1d",
       }
     );
-    res.cookie("token", token, { httpOnly: true, maxAge: 86400000 });
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true, // Required for HTTPS on Vercel
+      sameSite: "None",
+      maxAge: 86400000,
+    });
+
     res.status(200).json({ message: "Signin successful", user, token });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
@@ -64,9 +70,7 @@ export const getUser = async (req, res) => {
   }
 };
 
-//! 
-
-
+//!
 
 //! send verification code controller
 // export const sendVerificationCode = async (req, res) => {
