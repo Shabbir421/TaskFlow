@@ -1,8 +1,10 @@
+/** @format */
+
 import axios from "axios";
 
 // Base URL for your backend
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000/api", // Backend base URL
+  baseURL: "https://task-flow-backend-beige.vercel.app/api/", // Backend base URL
   withCredentials: true, // If using cookies
 });
 
