@@ -25,10 +25,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["https://taskflow-frontend.vercel.app/api"],
+    origin: ["https://taskflow-frontend.vercel.app"],
     credentials: true,
   })
 );
+
 app.use(cookieParser());
 
 // ✅ Routes
