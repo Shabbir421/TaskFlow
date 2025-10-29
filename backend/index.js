@@ -23,7 +23,7 @@ const connectDB = async () => {
 // ✅ Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: "https://task-flow-frontend-ruddy.vercel.app", credentials: true }));
+app.use(cors({ origin: "https://task-flow-frontend-ruddy.vercel.app/", credentials: true }));
 app.use(cookieParser());
 
 // ✅ Routes
